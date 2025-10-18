@@ -1,132 +1,145 @@
-# CSharpBootcamp501
+# Online Ticari Otomasyon Sistemi
 
 [TR]
 
-**C# Programlama Dili Temel ve Orta Seviye Eğitim Kampı İçeriği**
+**ASP.NET MVC ile Geliştirilmiş Online Ticari Otomasyon Sistemi**
 
 [![C#](https://img.shields.io/badge/Language-C%23-blue.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
-[![.NET Core](https://img.shields.io/badge/Platform-.NET%20(Core)%2F.NET%20Framework-purple.svg)](https://dotnet.microsoft.com/)
-[![GitHub repo size](https://img.shields.io/github/repo-size/abdullahhaktan/CSharpBootcamp501)](https://github.com/abdullahhaktan/CSharpBootcamp501)
+[![ASP.NET MVC](https://img.shields.io/badge/Framework-ASP.NET%20MVC-brightgreen.svg)](https://dotnet.microsoft.com/apps/aspnet/mvc)
+[![Entity Framework](https://img.shields.io/badge/ORM-Entity%20Framework-blueviolet.svg)](https://docs.microsoft.com/en-us/ef/)
+[![GitHub repo size](https://img.shields.io/github/repo-size/abdullahhaktan/OnlineTicariOtomasyonSistemi)](https://github.com/abdullahhaktan/OnlineTicariOtomasyonSistemi)
 
 ---
 
 ## 💻 Proje Hakkında
 
-Bu depo, bir C# eğitim kampının (Bootcamp) **temel ve orta seviye** aşamalarını kapsayan tüm kod örneklerini, alıştırmalarını ve basit uygulamalarını içerir. Yeni başlayanların C# diline sağlam bir temel atmaları ve **Nesne Yönelimli Programlama (OOP)** prensiplerini uygulamalı olarak öğrenmeleri için tasarlanmıştır.
+Bu proje, **ASP.NET MVC** mimarisi kullanılarak geliştirilmiş, web tabanlı kapsamlı bir **Online Ticari Otomasyon Sistemi**'dir. Sistem, ticari süreçlerin yönetimi, stok takibi, satış raporlama ve kullanıcı etkileşimi gibi temel işlevleri modern bir arayüzle sunar.
+
+### ⚙️ Teknik Altyapı
+
+* **Mimari:** ASP.NET MVC
+* **Programlama Dili:** C#
+* **Veri Erişim:** Entity Framework (`Code First` Yaklaşımı ile oluşturulmuştur.)
+* **Sorgulama:** LINQ Sorguları kullanılarak Entity Framework ile gerçekleştirilmiştir.
+* **Arayüz:** AdminLTE Template kullanılarak modern ve duyarlı bir kullanıcı deneyimi sağlanmıştır.
+* **Modülerlik:** "Hızlı Bakış" tabloları gibi önemli bileşenler **Partial View** yapısıyla modüler ve yeniden kullanılabilir şekilde tasarlanmıştır.
+* **Grafikler:** ASP.NET'in sunduğu yerleşik grafik yapıları kullanılarak dinamik ve görsel raporlama sağlanmıştır (Örn: Ürün - Stok Grafiği).
 
 ---
 
-## ✨ Kapsanan Temel Konular
+## ✨ Ana Özellikler
 
-Bu eğitim kampı içeriği genellikle aşağıdaki alanlarda bilgi ve pratik kazanmayı amaçlar:
+Sistem, yetki seviyelerine göre farklı işlevler sunar:
 
-### C# Temelleri ve Kontrol Yapıları
-* **Değişkenler ve Veri Tipleri:** Temel ve karmaşık veri tipleri.
-* **Operatörler ve İfadeler:** Aritmetik, mantıksal ve karşılaştırma operatörleri.
-* **Kontrol Akış Yapıları:** `if-else`, `switch`, `for`, `while`, `do-while` döngüleri.
-* **Diziler (Arrays) ve Listeler:** Tek boyutlu ve çok boyutlu diziler ile `List<T>` kullanımı.
-* **Metotlar ve Fonksiyonlar:** Metot tanımlama, parametre geçiş türleri (`ref`, `out`).
+### 1. Kullanıcı Girişi ve Yetkilendirme
+Sisteme iki ana yetki seviyesinde giriş yapılabilir:
+* **Admin Girişi:** Tüm yönetimsel ve raporlama işlevlerine erişim sağlar.
+* **Cari Girişi (Müşteri/Tedarikçi):** Kendi siparişlerini, kargo takibini ve profil bilgilerini yönetebilir.
 
-### Nesne Yönelimli Programlama (OOP) Giriş
-* **Sınıflar (Classes) ve Nesneler (Objects):** Sınıf tanımlama, constructor'lar.
-* **Temel OOP Prensipleri:**
-    * **Kapsülleme (Encapsulation):** `public`, `private`, `protected` erişim belirleyicileri.
-    * **Kalıtım (Inheritance):** Sınıf miras alma ve `base` kullanımı.
-    * **Çok Biçimlilik (Polymorphism):** Metotların aşırı yüklenmesi (Overloading) ve geçersiz kılınması (Overriding).
-* **Arayüzler (Interfaces):** Tanımlama ve uygulama pratikleri.
+### 2. Yönetim ve Raporlama (Admin Paneli)
+* **Hızlı Bakış Tabloları:** Kategori, Müşteri/Şehir ve Departman/Personel bazlı anlık özet verileri gösteren Partial View'ler.
+* **Dinamik Stok/Satış Grafikleri:** Ürün bazında stok durumunu gösteren pasta grafik gibi görsel raporlama araçları.
+* **CRUD İşlemleri:** Ürün, kategori, cari, personel ve giderler üzerinde Silme (`Emin misiniz?` onayı ile), Güncelleme ve Satış yapma.
 
-### Geliştirme Uygulamaları
-* **Hata Yönetimi (Exception Handling):** `try-catch-finally` bloklarının kullanımı.
-* **String İşlemleri:** Metin manipülasyonları ve biçimlendirme.
+### 3. Cari Hesap İşlemleri (Cari Paneli)
+* **Profil Yönetimi:** Cari, kendi ad-soyad, e-posta, toplam satış ve toplam ürün sayısı gibi bilgilerini görüntüleyebilir.
+* **Sipariş ve Kargo Takibi:** Mevcut siparişlerini listeleyebilir ve kargolarının durumunu takip edebilir.
+* **Duyurular:** Sistemden gelen önemli duyuruları kontrol edebilir.
+* **Mesajlaşma:** Sistemdeki diğer carilerle mesaj gönderebilme şansı vardır.
 
 ---
 
 ## 🚀 Nasıl Çalıştırılır?
 
-Bu depo, genellikle birden fazla konsol uygulaması veya sınıf kütüphanesi projesi içerir.
-
 1.  **Projeyi Klonlama:**
     ```bash
-    git clone [https://github.com/abdullahhaktan/CSharpBootcamp501](https://github.com/abdullahhaktan/CSharpBootcamp501)
-    cd CSharpBootcamp501
+    git clone [https://github.com/abdullahhaktan/OnlineTicariOtomasyonSistemi](https://github.com/abdullahhaktan/OnlineTicariOtomasyonSistemi)
+    cd OnlineTicariOtomasyonSistemi
     ```
 
-2.  **Projeleri Açma:**
-    * **Visual Studio** veya Visual Studio Code kullanarak kök dizindeki `.sln` (Solution) dosyasını açın.
-    * Her klasör, ilgili konunun örnek projesini içerir.
-3.  **Veri tabanı ayarları:**
-    * Manuel olarak veri tabanı ekleyip ilgili tabloları ekleyin
-    * appsettings veya ilgili dosyadaki veri tabanını ve sunucu adını belirlediğinizle değiştirin
+2.  **Projeyi Açma:**
+    * Visual Studio kullanarak kök dizindeki `.sln` (Solution) dosyasını açın.
 
-5.  **Çözümü Derleme ve Çalıştırma:**
+3.  **Veritabanı Ayarları:**
+    * Entity Framework Code First yaklaşımı kullanıldığı için, bağlantı dizgesini (`Connection String`) kontrol edin.
+    * Veritabanı sunucunuzu (`web.config` veya ilgili yapılandırma dosyasında) doğru şekilde ayarlayın ve migrasyonları uygulayarak tabloların oluşmasını sağlayın.
+
+4.  **Çözümü Derleme ve Çalıştırma:**
     * Visual Studio'da çözümü derleyin (`Build Solution` veya F6).
-    * Çalıştırmak istediğiniz projeyi **`Startup Project`** olarak ayarlayın ve **F5** tuşu ile uygulamayı başlatın.
+    * Uygulamayı çalıştırın (**F5**). Uygulama, öncelikle yetki seçme ekranı (**GİRİŞ FORMU**) ile başlayacaktır.
 
 ---
 ---
 
 [EN]
 
-# CSharpBootcamp501
+# Online Commercial Automation System
 
-**Beginner and Intermediate Training Camp Content for C# Programming Language**
+**Online Commercial Automation System Developed with ASP.NET MVC**
 
 ---
 
 ## 💻 About the Project
 
-This repository contains all code samples, exercises, and simple applications covering the **beginner and intermediate stages** of a C# programming bootcamp. It is designed for beginners to establish a solid foundation in C# and gain hands-on experience with **Object-Oriented Programming (OOP)** principles.
+This project is a comprehensive **Online Commercial Automation System** developed using the **ASP.NET MVC** architecture. The system provides essential functions such as managing commercial processes, inventory tracking, sales reporting, and user interaction through a modern interface.
+
+### ⚙️ Technical Stack
+
+* **Architecture:** ASP.NET MVC
+* **Language:** C#
+* **Data Access:** Entity Framework (using the `Code First` approach)
+* **Querying:** Implemented with LINQ Queries via Entity Framework.
+* **UI:** AdminLTE Template is used for a modern and responsive user experience.
+* **Modularity:** Key components like the "Quick Look" tables are designed as **Partial Views** for a modular and reusable structure.
+* **Charts:** Dynamic and visual reporting is provided using ASP.NET's built-in charting structures (e.g., Product - Stock Chart).
 
 ---
 
-## ✨ Core Topics Covered
+## ✨ Core Features
 
-This training content generally aims for knowledge and practice in the following areas:
+The system offers different functionalities based on authorization levels:
 
-### C# Fundamentals and Control Structures
-* **Variables and Data Types:** Primitive and complex data types.
-* **Operators and Expressions:** Arithmetic, logical, and comparison operators.
-* **Control Flow Structures:** `if-else`, `switch`, `for`, `while`, and `do-while` loops.
-* **Arrays and Lists:** Usage of single/multi-dimensional arrays and `List<T>`.
-* **Methods and Functions:** Method definition and parameter passing types (`ref`, `out`).
+### 1. User Login and Authorization
+The system supports two main authorization levels:
+* **Admin Login:** Provides access to all administrative and reporting functions.
+* **Current Account (Customer/Supplier) Login:** Can manage their own orders, cargo tracking, and profile information.
 
-### Introduction to Object-Oriented Programming (OOP)
-* **Classes and Objects:** Class definition and constructors.
-* **Fundamental OOP Principles:**
-    * **Encapsulation:** `public`, `private`, `protected` access modifiers.
-    * **Inheritance:** Class derivation and use of `base`.
-    * **Polymorphism:** Method Overloading and Overriding.
-* **Interfaces:** Definition and implementation practices.
+### 2. Administration and Reporting (Admin Panel)
+* **Quick Look Tables:** Partial Views displaying instant summary data based on Category, Customer/City, and Department/Personnel.
+* **Dynamic Stock/Sales Charts:** Visual reporting tools like pie charts showing product-based stock status.
+* **CRUD Operations:** Create, Read, Update, and Delete operations on products, categories, current accounts, personnel, and expenses (with a "Are you sure?" confirmation for deletion).
 
-### Development Applications
-* **Exception Handling:** Usage of `try-catch-finally` blocks.
-* **String Manipulation:** Text manipulation and formatting techniques.
+### 3. Current Account Operations (Client Panel)
+* **Profile Management:** Current accounts can view their personal information, total sales, and total product count.
+* **Order and Cargo Tracking:** They can list their existing orders and track the status of their shipments.
+* **Announcements:** Can check important announcements from the system.
+* **Messaging:** Users have the ability to send messages to other current accounts within the system.
 
 ---
 
 ## 🚀 How to Run
 
-This repository typically contains multiple console applications or class library projects.
-
 1.  **Cloning the Project:**
     ```bash
-    git clone [https://github.com/abdullahhaktan/CSharpBootcamp501](https://github.com/abdullahhaktan/CSharpBootcamp501)
-    cd CSharpBootcamp501
+    git clone [https://github.com/abdullahhaktan/OnlineTicariOtomasyonSistemi](https://github.com/abdullahhaktan/OnlineTicariOtomasyonSistemi)
+    cd OnlineTicariOtomasyonSistemi
     ```
 
-2.  **Opening the Projects:**
-    * Open the root directory's **`.sln`** (Solution) file using **Visual Studio** or Visual Studio Code.
-    * Each folder contains the sample project for its respective topic.
+2.  **Opening the Project:**
+    * Open the root directory's **`.sln`** (Solution) file using Visual Studio.
 
-3. **Database settings:**
-    * Manually add database and add related tables
-    * Replace the database and server name in * appsettings or related file with the one you specified
+3.  **Database Configuration:**
+    * Check the `Connection String`.
+    * Configure your database server and apply migrations to create the tables.
 
 4.  **Building and Running:**
-    * Build the solution in Visual Studio (`Build Solution` or F6).
-    * Set the project you wish to run as the **`Startup Project`** and press **F5** to start the application.
+    * Build the solution in Visual Studio.
+    * Start the application (**F5**).
 
 ---
----
 
-<img width="901" height="463" alt="csharp501 1" src="https://github.com/user-attachments/assets/5f92f352-5176-48cf-adf0-e033b6c9796b" />
+## 📸 Ekran Görüntüleri
+
+| Hızlı Bakış Tabloları | Ürün Stok Grafiği | Ürün Silme Onayı | Cari Profil ve Mesajlaşma | Giriş Formu |
+| :---: | :---: | :---: | :---: | :---: |
+| ![Hızlı Bakış Tabloları](image_46bc45.png) | ![Ürün Stok Grafiği](image_46bc63.png) | ![Ürün Silme Onayı](image_46bc6c.jpg) | ![Cari Profil ve Mesajlaşma](image_46bc25.png) | ![Giriş Formu](image_46bc88.jpg) |
