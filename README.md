@@ -140,20 +140,8 @@ The system supports two main authorization levels:
 
 ## 📸 Ekran Görüntüleri
 
-<img width="1233" height="568" alt="Ekran görüntüsü 2025-10-18 192025" src="https://github.com/user-attachments/assets/404b235f-8d79-4e32-a584-5c3e2c474b94" />
+Projenin temel arayüzlerini ve yetki seviyelerine göre ekranlarını gösteren kompakt tablo:
 
----
-
-<img width="1240" height="586" alt="Ekran görüntüsü 2025-10-18 192040" src="https://github.com/user-attachments/assets/37487135-0917-48ba-9381-5aeca30be117" />
-
----
-
-<img width="1237" height="589" alt="Ekran görüntüsü 2025-10-18 192053" src="https://github.com/user-attachments/assets/667c8d4f-4c7a-4f89-9d79-191fae7ad7fb" />
-
----
-
-<img width="1240" height="591" alt="Ekran görüntüsü 2025-10-18 192107" src="https://github.com/user-attachments/assets/7754c50e-5497-427f-b370-e86a2757902e" />
-
----
-
-<img width="1235" height="588" alt="Ekran görüntüsü 2025-10-18 192121" src="https://github.com/user-attachments/assets/835aa912-545b-43da-9b3a-e7a8b5b43a00" />
+| Giriş Formu | Hızlı Bakış Tabloları | Ürün Stok Grafiği | Cari Profil ve Mesajlaşma | Ürün Yönetimi (Uyarı) |
+| :---: | :---: | :---: | :---: | :---: |
+| ![Giriş Formu](image_46bc88.jpg) | ![Hızlı Bakış Tabloları](image_46bc45.png) | ![Ürün Stok Grafiği](image_46bc63.png) | ![Cari Profil ve Mesajlaşma](image_46bc25.png) | ![Ürün Silme Onayı](image_46bc6c.jpg) |
