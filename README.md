@@ -144,4 +144,4 @@ Projenin temel arayüzlerini ve yetki seviyelerine göre ekranlarını gösteren
 
 | Giriş Formu | Hızlı Bakış Tabloları | Ürün Stok Grafiği | Cari Profil ve Mesajlaşma | Ürün Yönetimi (Uyarı) |
 | :---: | :---: | :---: | :---: | :---: |
-| ![Giriş Formu](image_46bc88.jpg) | ![Hızlı Bakış Tabloları](image_46bc45.png) | ![Ürün Stok Grafiği](image_46bc63.png) | ![Cari Profil ve Mesajlaşma](image_46bc25.png) | ![Ürün Silme Onayı](image_46bc6c.jpg) |
+| ![Giriş Formu](https://github.com/user-attachments/assets/835aa912-545b-43da-9b3a-e7a8b5b43a00) | ![Hızlı Bakış Tabloları](https://github.com/user-attachments/assets/667c8d4f-4c7a-4f89-9d79-191fae7ad7fb) | ![Ürün Stok Grafiği](https://github.com/user-attachments/assets/37487135-0917-48ba-9381-5aeca30be117) | ![Cari Profil ve Mesajlaşma](https://github.com/user-attachments/assets/7754c50e-5497-427f-b370-e86a2757902e) | ![Ürün Silme Onayı](https://github.com/user-attachments/assets/404b235f-8d79-4e32-a584-5c3e2c474b94) |
