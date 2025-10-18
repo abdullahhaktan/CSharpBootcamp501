@@ -54,8 +54,11 @@ Bu depo, genellikle birden fazla konsol uygulaması veya sınıf kütüphanesi p
 2.  **Projeleri Açma:**
     * **Visual Studio** veya Visual Studio Code kullanarak kök dizindeki `.sln` (Solution) dosyasını açın.
     * Her klasör, ilgili konunun örnek projesini içerir.
+3.  **Veri tabanı ayarları:**
+    * Manuel olarak veri tabanı ekleyip ilgili tabloları ekleyin
+    * appsettings veya ilgili dosyadaki veri tabanını ve sunucu adını belirlediğinizle değiştirin
 
-3.  **Çözümü Derleme ve Çalıştırma:**
+5.  **Çözümü Derleme ve Çalıştırma:**
     * Visual Studio'da çözümü derleyin (`Build Solution` veya F6).
     * Çalıştırmak istediğiniz projeyi **`Startup Project`** olarak ayarlayın ve **F5** tuşu ile uygulamayı başlatın.
 
@@ -115,7 +118,11 @@ This repository typically contains multiple console applications or class librar
     * Open the root directory's **`.sln`** (Solution) file using **Visual Studio** or Visual Studio Code.
     * Each folder contains the sample project for its respective topic.
 
-3.  **Building and Running:**
+3. **Database settings:**
+    * Manually add database and add related tables
+    * Replace the database and server name in * appsettings or related file with the one you specified
+
+4.  **Building and Running:**
     * Build the solution in Visual Studio (`Build Solution` or F6).
     * Set the project you wish to run as the **`Startup Project`** and press **F5** to start the application.
 
