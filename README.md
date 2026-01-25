@@ -63,7 +63,7 @@ Uygulama açıldığında (Form1_Load), aşağıdaki istatistikleri Dapper ve SQ
       ```csharp
       SqlConnection connection = new SqlConnection("Server=SİZİN-SUNUCU-ADINIZ;initial Catalog=EgitimKampi501Db;integrated security=true");
       ```
-
+      
 4.  **Çözümü Derleme ve Çalıştırma:**
     * Visual Studio'da çözümü açın.
     * Çözümü derleyin (Build Solution).
